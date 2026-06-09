@@ -227,15 +227,15 @@
     <script>
         // DATA SET ORIGINAL PRESERVADO
         const ASSET_PIPELINE = [
-            { title: "DIA DE SUERTE", img: "1.jpg", user: "ASHLEY", avatar: "1.jpg" },
-            { title: "EXITACION", img: "2.JPG", user: "ASHLEY", avatar: "1.jpg" },
-            { title: "VANGUARDIA PURA", img: "3.JPG", user: "ASHLEY", avatar: "1.jpg" },
-            { title: "LUZ & PRESENCIA", img: "4.JPG", user: "LINDA", avatar: "1.jpg" },
-            { title: "DIA SENSUAL", img: "5.JPG", user: "ASHLEY", avatar: "1.jpg" },
-            { title: "DIA PRIVADO", img: "6.JPG", user: "LINDA", avatar: "1.jpg" },
-            { title: "LUJURIA", img: "7.JPG", user: "LINDA", avatar: "1.jpg" },
-            { title: "MAXIMA SEXUALIDAD", img: "8.JPG", user: "VALERY", avatar: "1.jpg" },
-            { title: "MAXIMA SEXUALIDAD", img: "9.jpg", user: "LINDA", avatar: "1.jpg" },
+            { title: "DIA DE SUERTE", img: "1.jpg", user: "ASHLEY", avatar: "1.jpg", url: "https://myaurahub.github.io/MY/" },
+            { title: "EXITACION", img: "2.JPG", user: "ASHLEY", avatar: "1.jpg", url: "https://myaurahub.github.io/MY/" },
+            { title: "VANGUARDIA PURA", img: "3.JPG", user: "ASHLEY", avatar: "1.jpg", url: "https://myaurahub.github.io/MY/" },
+            { title: "LUZ & PRESENCIA", img: "4.JPG", user: "LINDA", avatar: "1.jpg", url: "https://myaurahub.github.io/MY/" },
+            { title: "DIA SENSUAL", img: "5.JPG", user: "ASHLEY", avatar: "1.jpg", url: "https://myaurahub.github.io/MY/" },
+            { title: "DIA PRIVADO", img: "6.JPG", user: "LINDA", avatar: "1.jpg", url: "https://myaurahub.github.io/MY/" },
+            { title: "LUJURIA", img: "7.JPG", user: "LINDA", avatar: "1.jpg", url: "https://myaurahub.github.io/MY/" },
+            { title: "MAXIMA SEXUALIDAD", img: "8.JPG", user: "VALERY", avatar: "1.jpg", url: "https://myaurahub.github.io/MY/" },
+            { title: "MAXIMA SEXUALIDAD", img: "9.jpg", user: "LINDA", avatar: "1.jpg", url: "https://myaurahub.github.io/MY/" },
 
         ];
 
@@ -289,8 +289,14 @@
                     </div>
                 </div>
             `;
-            return card;
-        }
+            card.style.cursor = "pointer";
+
+    card.addEventListener("click", () => {
+        window.location.href = data.url;
+    });
+
+    return card;
+}
 
         function renderCard(index) {
             container.innerHTML = "";
